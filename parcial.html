@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrega de Parcial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul-plano:#16365c;
+    --azul-profundo:#0e2440;
+    --linea:#3e6190;
+    --tiza:#eef4fb;
+    --tiza-suave:#b8cce6;
+    --ambar:#ffb347;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Space Grotesk',sans-serif;
+    background-color:var(--azul-plano);
+    background-image:
+      linear-gradient(rgba(238,244,251,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(238,244,251,.05) 1px, transparent 1px);
+    background-size:32px 32px;
+    color:var(--tiza);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  .marco{
+    max-width:880px;
+    width:100%;
+    margin:0 auto;
+    padding:48px 24px 32px;
+    flex:1;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.75rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--tiza-suave);
+    border:1px solid var(--linea);
+    display:inline-block;
+    padding:6px 12px;
+    margin-bottom:20px;
+  }
+  h1{
+    font-size:clamp(1.8rem,5vw,2.8rem);
+    font-weight:700;
+    line-height:1.15;
+    margin-bottom:10px;
+  }
+  .datos{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.85rem;
+    color:var(--tiza-suave);
+    margin-bottom:40px;
+    line-height:1.8;
+  }
+  .figura{
+    border:1px solid var(--linea);
+    background:var(--azul-profundo);
+    padding:16px;
+    margin-bottom:36px;
+  }
+  .figura-titulo{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.75rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--tiza-suave);
+    margin-bottom:12px;
+  }
+  .figura-titulo .num{color:var(--ambar);}
+  video, .video-embed{
+    width:100%;
+    aspect-ratio:16/9;
+    display:block;
+    background:#000;
+    border:0;
+  }
+  .cta{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    text-decoration:none;
+    border:1px solid var(--ambar);
+    color:var(--tiza);
+    padding:22px 24px;
+    transition:background .2s ease, transform .2s ease;
+  }
+  .cta:hover{
+    background:rgba(255,179,71,.12);
+    transform:translateY(-2px);
+  }
+  .cta:focus-visible{
+    outline:2px solid var(--ambar);
+    outline-offset:3px;
+  }
+  .cta-texto strong{
+    display:block;
+    font-size:1.15rem;
+    margin-bottom:4px;
+  }
+  .cta-texto span{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.8rem;
+    color:var(--tiza-suave);
+  }
+  .cta-flecha{
+    font-size:1.6rem;
+    color:var(--ambar);
+    flex-shrink:0;
+  }
+  footer{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.72rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--tiza-suave);
+    border-top:1px solid var(--linea);
+    padding:16px 24px;
+    text-align:center;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .cta{transition:none;}
+  }
+</style>
+</head>
+<body>
+<main class="marco">
+
+  <span class="eyebrow">Entrega de parcial</span>
+
+  <!-- ✏️ EDITÁ ESTOS DATOS -->
+  <h1>  Parcial #3</h1>
+  <p class="datos">
+    Alumno/a: Adriana Guadalupe Landaverde Lizama<br>
+    Materia: Realidad Amentada<br>
+  </p>
+
+  <!-- ══════════ VIDEO ══════════ -->
+  <section class="figura">
+    <div class="figura-titulo">
+      <span><span class="num">Fig. 01</span> — Video de presentación</span>
+      <span>Reproducir ▸</span>
+    </div>
+
+    <!-- OPCIÓN A: video propio (archivo .mp4 en la misma carpeta).
+         Reemplazá "mi-video.mp4" por el nombre de tu archivo. -->
+    <video controls preload="metadata">
+      <source src="Realidad Aumentada.mp4" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
+
+    <!-- OPCIÓN B: video de YouTube.
+         Borrá el bloque <video> de arriba, descomentá este iframe
+         y reemplazá CODIGO_DEL_VIDEO por el código de tu video
+         (lo que aparece después de "watch?v=" en la URL).
+
+    <iframe class="video-embed"
+      src="https://www.youtube.com/embed/CODIGO_DEL_VIDEO"
+      title="Video del parcial"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    -->
+  </section>
+
+  <!-- ══════════ ENLACE AL SIMULADOR ══════════ -->
+  <!-- ✏️ Reemplazá href="#" por la URL de tu simulador -->
+  <a class="cta" href="https://www.spatial.io/s/violent_fox571s-Bespoke-Hangout-6a1f0a4851756ee8fc66dec4" target="_blank" rel="noopener">
+    <div class="cta-texto">
+      <strong>Abrir Spatial</strong>
+      <span>Fig. 02 — Se abre en una pestaña nueva</span>
+    </div>
+    <span class="cta-flecha">→</span>
+  </a>
+
+</main>
+
+<footer>Trabajo práctico · Entrega digital · 2026</footer>
+</body>
+</html>
